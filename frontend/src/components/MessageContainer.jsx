@@ -3,9 +3,9 @@ import Message from "./Message";
 import MessageInput from "./MessageInput";
 import { useEffect, useRef, useState } from "react";
 import useShowToast from "../hooks/useShowToast";
-import { conversationsAtom, selectedConversationsAtom } from "../atoms/messagesAtom.js";
+import { conversationsAtom, selectedConversationsAtom } from "@atoms/messagesAtom";
 import { useRecoilValue, useSetRecoilState } from "recoil";
-import userAtom from "../atoms/userAtom";
+import userAtom from "@atoms/userAtom";
 import { useSocket } from "../context/SocketContext.jsx";
 import messageSound from "../assets/sounds/message.mp3";
 const MessageContainer = () => {
