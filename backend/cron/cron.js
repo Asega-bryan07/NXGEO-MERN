@@ -2,8 +2,8 @@ import cron from "cron";
 import https from "https";
 
 // const URL = "https://nxgeo.com"; //.com domain
-const URL = "https://inxgeo.vercel.app"; //vercel domain
-// const URL = "https://nxgeo.onrender.com"; //onrender domain
+// const URL = "https://inxgeo.vercel.app"; //vercel domain
+const URL = "https://nxgeo.onrender.com"; //onrender domain
 // const URL = "localhost:3000"; //test mode locally
 
 const job = new cron.CronJob("*/14 * * * *", function () { //cron every 14 minutes
