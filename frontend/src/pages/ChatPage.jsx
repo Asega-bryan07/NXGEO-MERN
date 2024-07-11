@@ -6,7 +6,7 @@ import MessageContainer from "../components/MessageContainer";
 import { useEffect, useState } from "react";
 import useShowToast from "../hooks/useShowToast";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { conversationsAtom, selectedConversationAtom } from "../atoms/messagesAtom";
+import { conversationsAtom, selectedconversationsAtom } from "../atoms/messagesAtom";
 import userAtom from "../atoms/userAtom";
 import { useSocket } from "../context/SocketContext";
 
@@ -14,7 +14,7 @@ const ChatPage = () => {
 	const [searchingUser, setSearchingUser] = useState(false);
 	const [loadingConversations, setLoadingConversations] = useState(true);
 	const [searchText, setSearchText] = useState("");
-	const [selectedConversation, setSelectedConversation] = useRecoilState(selectedConversationAtom);
+	const [selectedConversation, setSelectedConversation] = useRecoilState(selectedconversationsAtom);
 	const [conversations, setConversations] = useRecoilState(conversationsAtom);
 	const currentUser = useRecoilValue(userAtom);
 	const showToast = useShowToast();
