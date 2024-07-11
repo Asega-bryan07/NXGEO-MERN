@@ -3,7 +3,7 @@ import Message from "./Message";
 import MessageInput from "./MessageInput";
 import { useEffect, useRef, useState } from "react";
 import useShowToast from "../hooks/useShowToast";
-import { conversationsAtom, selectedConversationsAtom } from "../atoms/messagesAtom";
+import { conversationsAtom, selectedConversationsAtom } from "../atoms/messagesAtom.js";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import userAtom from "../atoms/userAtom";
 import { useSocket } from "../context/SocketContext.jsx";

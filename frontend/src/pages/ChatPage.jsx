@@ -7,8 +7,8 @@ import { useEffect, useState } from "react";
 import useShowToast from "../hooks/useShowToast";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { conversationsAtom, selectedconversationsAtom } from "../atoms/messagesAtom";
-import userAtom from "../atoms/userAtom";
-import { useSocket } from "../context/SocketContext";
+import userAtom from "./../atoms/userAtom";
+import { useSocket } from "./../context/SocketContext";
 
 const ChatPage = () => {
 	const [searchingUser, setSearchingUser] = useState(false);
