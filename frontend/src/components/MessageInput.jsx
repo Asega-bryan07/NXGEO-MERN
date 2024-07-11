@@ -16,7 +16,7 @@ import {
 import { useRef, useState } from "react";
 import { IoSendSharp } from "react-icons/io5";
 import useShowToast from "../hooks/useShowToast";
-import { conversationsAtom, selectedConversationAtom } from "../atoms/messagesAtom";
+import { conversationsAtom, selectedConversationsAtom } from "../atoms/messagesAtom";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import { BsFillImageFill } from "react-icons/bs";
 import usePreviewImg from "../hooks/usePreviewImg";
@@ -24,7 +24,7 @@ import usePreviewImg from "../hooks/usePreviewImg";
 const MessageInput = ({ setMessages }) => {
 	const [messageText, setMessageText] = useState("");
 	const showToast = useShowToast();
-	const selectedConversation = useRecoilValue(selectedConversationAtom);
+	const selectedConversation = useRecoilValue(selectedConversationsAtom);
 	const setConversations = useSetRecoilState(conversationsAtom);
 	const imageRef = useRef(null);
 	const { onClose } = useDisclosure();

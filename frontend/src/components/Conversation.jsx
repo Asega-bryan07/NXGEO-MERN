@@ -13,13 +13,13 @@ import {
 import { useRecoilState, useRecoilValue } from "recoil";
 import userAtom from "../atoms/userAtom";
 import { BsCheck2All, BsFillImageFill } from "react-icons/bs";
-import { selectedConversationAtom } from "../atoms/messagesAtom";
+import { selectedConversationsAtom } from "../atoms/messagesAtom";
 
 const Conversation = ({ conversation, isOnline }) => {
 	const user = conversation.participants[0];
 	const currentUser = useRecoilValue(userAtom);
 	const lastMessage = conversation.lastMessage;
-	const [selectedConversation, setSelectedConversation] = useRecoilState(selectedConversationAtom);
+	const [selectedConversation, setSelectedConversation] = useRecoilState(selectedConversationsAtom);
 	const colorMode = useColorMode();
 
 	console.log("selectedConverstion", selectedConversation);
